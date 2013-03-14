@@ -471,12 +471,12 @@
                                 ,deltaY = ori.detail || ori.wheelDeltaY
                                 ,v = parseInt(s.v) + (deltaX>0 || deltaY>0 ? s.o.step : deltaX<0 || deltaY<0 ? -s.o.step : 0);
 
+                            s.val(v);
+                            
                             if (
                                 s.cH
                                 && (s.cH(v) === false)
                             ) return;
-
-                            s.val(v);
                         }
                 , kval, to, m = 1, kv = {37:-s.o.step, 38:s.o.step, 39:s.o.step, 40:-s.o.step};
 
